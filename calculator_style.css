@@ -1,0 +1,44 @@
+@font-face {
+	font-family: segment7;
+	src: url(fonts/digital-7.regular.ttf);
+}
+
+#wrapper {
+	width: 1000px;
+	position: relative;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+#wrapper .calculator {
+	width: 400px;
+	height: 600px;
+	border: 1px solid white;
+	border-radius: 50px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	font-family: segment7;
+}
+
+#wrapper .calculator .output {
+	margin-top: 20px;
+	width: 360px;
+	height: 100px;
+	border: 2px solid white;
+	border-radius: 20px;
+}
+#wrapper .calculator .output input {
+	background: transparent;
+	color: white;
+	border: none;
+	width: 95%;
+	height: 100%;
+	font-size: 72px;
+	text-align: right;
+	caret-color: transparent;
+}
+
+#wrapper .calculator .output input:focus {
+	outline: none;
+}
