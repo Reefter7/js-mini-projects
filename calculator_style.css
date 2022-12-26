@@ -1,6 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Chivo+Mono');
+
 @font-face {
 	font-family: segment7;
 	src: url(fonts/digital-7.regular.ttf);
+}
+
+.noselect, .calcbutton {
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+		 -moz-user-select: none; /* Old versions of Firefox */
+		  -ms-user-select: none; /* Internet Explorer/Edge */
+			  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
 }
 
 #wrapper {
@@ -17,28 +28,79 @@
 	border-radius: 50px;
 	position: relative;
 	display: flex;
-	justify-content: center;
-	font-family: segment7;
+	flex-direction: column;
+	justify-content: space-between;
+	align-items: center;
+	
 }
 
 #wrapper .calculator .output {
-	margin-top: 20px;
+	margin: 20px;
 	width: 360px;
 	height: 100px;
 	border: 2px solid white;
 	border-radius: 20px;
+	font-family: segment7;
 }
 #wrapper .calculator .output input {
 	background: transparent;
 	color: white;
 	border: none;
-	width: 95%;
-	height: 100%;
-	font-size: 72px;
 	text-align: right;
 	caret-color: transparent;
+	outline: none;
+	cursor: default;
+}
+#wrapper .calculator .output input#memory {
+	width: 95%;
+	height: 30%;
+	font-size: 30px;
+}
+#wrapper .calculator .output input#current {
+	width: 95%;
+	height: 70%;
+	font-size: 60px;
 }
 
-#wrapper .calculator .output input:focus {
-	outline: none;
+#wrapper .calculator .input {
+	margin: 20px;
+	width: 360px;
+	height: 400px;
+	display: flex;
+	position: relative;
+	font-family: 'Chivo Mono', monospace;
+}
+
+#wrapper .calculator .input .calccolumn {
+	display: flex;
+	position: relative;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	align-content: space-between;
+}
+
+#wrapper .calculator .input .calccolumn .calcbutton {
+	width: 50px;
+	height: 50px;
+	margin: 10px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 50px;
+
+	transition: .5s;
+	cursor: pointer;
+	border-radius: 25px;
+	font-size: larger;
+}
+
+#wrapper .calculator .input .calccolumn .calcbutton:hover {
+	background: rgba(0,0,0,.5);
+}
+
+#wrapper .calculator .input .calccolumn .calcbutton#equals {
+	background: var(--accentcolor);
+}
+#wrapper .calculator .input .calccolumn .calcbutton#equals:hover {
+	opacity: .8;
 }

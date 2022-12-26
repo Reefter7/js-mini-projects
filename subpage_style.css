@@ -39,7 +39,7 @@ header {
 	width: 200px;
 	padding: 10px;
 	transition: .5s;
-	transform: translateY(-25px);
+	transform: translateY(-20px);
 }
 
 header:hover {
