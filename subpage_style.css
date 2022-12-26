@@ -40,6 +40,7 @@ header {
 	padding: 10px;
 	transition: .5s;
 	transform: translateY(-20px);
+	z-index: 1000;
 }
 
 header:hover {

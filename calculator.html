@@ -7,6 +7,7 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="subpage_style.css">
 	<link rel="stylesheet" href="calculator_style.css">
+	<script src="calculator_script.js" defer></script>
 </head>
 <body>
 	<header id="header"><a href="index.html"> 
@@ -20,16 +21,16 @@
 	<div id="wrapper">
 		<div class="calculator">
 			<div class="output">
-				<input type="text" id="memory">
-				<input type="text" id="current">
+				<input type="text" id="memory" readonly>
+				<input type="text" id="current" value='0' readonly>
 			</div>
 			<div class="input">
 				<div class="calccolumn">
-					<div class="calcbutton" id="clear"><p>AC</p></div>
+					<div class="calcbutton" id="clear">AC</div>
 					<div class="calcbutton" id="seven">7</div>
 					<div class="calcbutton" id="four">4</div>
 					<div class="calcbutton" id="one">1</div>
-					<div class="calcbutton" id="more">...</div>
+					<div class="calcbutton" id="ans">ANS</div>
 				</div>
 				<div class="calccolumn">
 					<div class="calcbutton" id="delete">DEL</div>

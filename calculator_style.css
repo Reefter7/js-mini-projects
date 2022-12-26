@@ -24,7 +24,7 @@
 #wrapper .calculator {
 	width: 400px;
 	height: 600px;
-	border: 1px solid white;
+	border: 5px solid var(--accentcolor);
 	border-radius: 50px;
 	position: relative;
 	display: flex;
@@ -38,7 +38,8 @@
 	margin: 20px;
 	width: 360px;
 	height: 100px;
-	border: 2px solid white;
+	border: 2px solid var(--accentcolor);
+	background: var(--accentcolor);
 	border-radius: 20px;
 	font-family: segment7;
 }
@@ -95,12 +96,13 @@
 }
 
 #wrapper .calculator .input .calccolumn .calcbutton:hover {
-	background: rgba(0,0,0,.5);
+	background: var(--accentcolor);
+	opacity: .3;
 }
 
 #wrapper .calculator .input .calccolumn .calcbutton#equals {
 	background: var(--accentcolor);
 }
 #wrapper .calculator .input .calccolumn .calcbutton#equals:hover {
-	opacity: .8;
+	opacity: .7;
 }
