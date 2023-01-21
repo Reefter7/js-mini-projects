@@ -175,3 +175,7 @@ function updateInput(){
 	document.getElementById('clear').innerHTML = 
 	(currPrompt == '0')?'AC':'C';
 }
+
+
+
+console.log("calculator_script.js loaded");
