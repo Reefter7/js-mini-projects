@@ -1,7 +1,15 @@
 //////Scramble ////////////////////////////////////////////
-const scrambledOrderI = [0,1,2,3].sort((a,b)=>.5-Math.random());
+const scrambledOrderI = [0,1,2,3].sort((a,b)=>.5-Math.random()); //sort biased, different scramble method needed!
 const scrambledOrderJ = [0,1,2,3].sort((a,b)=>.5-Math.random());
 let openField = {i: scrambledOrderI[3], j: scrambledOrderJ[3]};
+
+//make sure puzzle is solvable
+let inversions = 0;
+for(i = 0; i < scrambledOrderI.length; i++){
+	for(j = 0; j < scrambledOrderJ.length; i++){
+		
+	}
+}
 
 //////Create all sliders //////////////////////////////////
 let board = document.getElementById('board');
