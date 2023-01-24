@@ -1,3 +1,12 @@
+.noselect, #wrapper #board .slider {
+-webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+   -khtml-user-select: none; /* Konqueror HTML */
+	 -moz-user-select: none; /* Old versions of Firefox */
+	  -ms-user-select: none; /* Internet Explorer/Edge */
+		  user-select: none; /* Non-prefixed version, currently supported by Chrome, Edge, Opera and Firefox */
+}
+
 #wrapper {
 	width: 1000px;
 	position: relative;
@@ -14,6 +23,7 @@
 }
 
 #wrapper #board .slider {
+	display: flex;
 	width: 120px;
 	height: 120px;
 	border: 3px solid var(--accentcolor);
@@ -21,4 +31,37 @@
 	position: absolute;
 	transform: translate(calc(125px*var(--i)),calc(125px*var(--j)));
 	margin: 0;
+	transition: transform .5s ease;
+	font-size: 60px;
+	color: var(--accentcolor);
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
 }
+
+/* convert html data into css variable */
+*[data-i="0"] {--i: 0;}
+*[data-i="1"] {--i: 1;}
+*[data-i="2"] {--i: 2;}
+*[data-i="3"] {--i: 3;}
+*[data-j="0"] {--j: 0;}
+*[data-j="1"] {--j: 1;}
+*[data-j="2"] {--j: 2;}
+*[data-j="3"] {--j: 3;}
+*[data-home='0'] {--home: 0;}
+*[data-home='1'] {--home: 1;}
+*[data-home='2'] {--home: 2;}
+*[data-home='3'] {--home: 3;}
+*[data-home='4'] {--home: 4;}
+*[data-home='5'] {--home: 5;}
+*[data-home='6'] {--home: 6;}
+*[data-home='7'] {--home: 7;}
+*[data-home='8'] {--home: 8;}
+*[data-home='9'] {--home: 9;}
+*[data-home='10'] {--home: 10;}
+*[data-home='11'] {--home: 11;}
+*[data-home='12'] {--home: 12;}
+*[data-home='13'] {--home: 13;}
+*[data-home='14'] {--home: 14;}
+*[data-home='15'] {--home: 15;}
