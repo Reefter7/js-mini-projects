@@ -37,6 +37,7 @@ img, picture, svg, video {
 	position: relative;
 	display: flex;
 	justify-content: space-between;
+	flex-wrap: wrap;
 
 }
 

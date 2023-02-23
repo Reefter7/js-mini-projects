@@ -1,0 +1,112 @@
+html, body {position: relative; z-index: -2}
+#navbar {
+	width: 500px;
+	height:100px;
+	background-color: white;
+	border-radius: 50px;
+	display: flex;
+	justify-content: space-around;
+    align-items: center;
+	padding: 10px 20px;
+	box-shadow: 5px 5px 5px 5px;
+}
+
+#navbar > i {
+	font-size: 1.5rem;
+	color: rgba(0,0,0,.3);
+	transition: color 500ms ease;
+	cursor: pointer;
+	position: relative;
+}
+#navbar > i:hover {
+	color: var(--accentcolor);
+}
+
+#more {
+	background-color: var(--accentcolor);
+	width: 100px;
+	aspect-ratio: 1 / 1;
+	transform: translateY(-50px);
+	border-radius: 50px;
+	cursor: pointer;
+	appearance: none;
+}
+#more::after {
+	content: "+";
+	color: white;
+	position: absolute;
+	top: 50%; left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 3em;
+	transition: transform 1s ease-in-out;
+}
+
+#more:checked::after {
+	transform: translate(-50%, -50%) rotate(225deg);
+}
+
+.menu-more{
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	z-index: -2;
+	isolation: isolate;
+}
+
+.menu-more > * {
+	position: absolute;
+	width: 200px;
+	aspect-ratio: 1 / 1;
+	z-index: -1;
+	transform: translateY(-49px);
+	border-radius: 100px;
+	transition: transform 1s ease-in-out;
+}
+
+#more:checked ~ .menu-more > * {
+	transform: translateY(-50px) rotate(180deg);
+}
+
+.menu-more1 {
+	background: linear-gradient(transparent 50%,yellow 50%);
+	transition-delay: 0;
+	z-index: 1;
+}
+.menu-more2 {
+	background: linear-gradient(transparent 50%,aqua 50%);
+	transition-delay: 150ms;
+	z-index: 2;
+}
+.menu-more3 {
+	background: linear-gradient(transparent 50%,white 50%);
+	transition-delay: 300ms;
+	z-index: 3;
+	width: inherit;
+	aspect-ratio: 1 / 1;
+	position: relative;
+}
+
+.menu-more-button {
+	font-size: 25px;
+	position: absolute;
+	color: var(--accentcolor);
+	opacity: .5;
+	z-index: 100;
+	cursor: pointer;
+}
+
+.menu-more-button:nth-child(1) {
+	transform: translate(150px, 130px) rotate(180deg);
+}
+
+.menu-more-button:nth-child(2) {
+	transform: translate(88px, 160px) rotate(180deg);
+}
+
+.menu-more-button:nth-child(3) {
+    transform: translate(22px, 130px) rotate(180deg);
+}
+
+.menu-more-button:hover {
+	opacity: .8;
+}
