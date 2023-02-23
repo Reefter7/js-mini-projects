@@ -93,6 +93,7 @@
 	cursor: pointer;
 	border-radius: 25px;
 	font-size: larger;
+	color: white;
 }
 
 #wrapper .calculator .input .calccolumn .calcbutton:hover {
