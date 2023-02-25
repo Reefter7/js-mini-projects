@@ -3,6 +3,8 @@
 :root {
 	--bgcolor: #0c0030;
 	--accentcolor: #00dd00;
+	--accentcolor-dark: hsl(120, 100%, 25%);
+	--accentcolor-low-opacity: rgba(0, 221, 0, .5);
 }
 
 *, *::before, *::after {
